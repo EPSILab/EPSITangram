@@ -1,0 +1,118 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="EPSI.Tangram.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="Black"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    shell:SystemTray.BackgroundColor="White"
+    shell:SystemTray.ForegroundColor="Black">
+
+    <!-- Conteneur principal -->
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Conteneur du titre -->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="EPSI TANGRAM"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Foreground="Black" />
+            <TextBlock Text="à propos"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}"
+                       Foreground="Black" />
+        </StackPanel>
+
+        <!-- Conteneur du contenu -->
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1"
+              Margin="12,0,12,0">
+            
+            <!-- Logo -->
+            <Image Source="Assets/TileImage.png"
+                   Height="90" Width="90"
+                   Margin="85,10,0,0"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   MouseLeftButtonUp="SiteEPSI_OnMouseLeftButtonUp" />
+
+            <!-- Informations sur l'application -->
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Margin="190,20,0,0">
+                <TextBlock Text="EPSI Tangram"
+                           FontSize="30" />
+                <TextBlock Text="www.epsi.fr"
+                           Foreground="#DE3043"
+                           MouseLeftButtonUp="SiteEPSI_OnMouseLeftButtonUp"/>
+            </StackPanel>
+
+            <TextBlock Text="L'EPSI est une école informatique présente à Amiens, Arras, Bordeaux, Grenoble, Lille, Lyon, Montpellier, Nantes et Paris. Celle-ci propose des formation BAC+2, BAC+3 et BAC+5 en ingénierie informatique."
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Top"
+                       Margin="10,125,10,0" />
+
+            <!-- Informations sur le développement -->
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Margin="0,280,0,0">
+
+                <TextBlock Text="Développement de l'application:"
+                           VerticalAlignment="Top" HorizontalAlignment="Left"
+                           FontWeight="Bold"
+                           Margin="10,0,0,0" />
+
+                <TextBlock Text="Jean-Baptiste Vigneron, président EPSILab"
+                           Margin="10, 5, 0, 0"
+                           HorizontalAlignment="Center" />
+
+                <Image Source="Assets\EPSILabLogo.png"
+                       Height="78" Width="250"
+                       Margin="0,15,0,0"
+                       VerticalAlignment="Top"
+                       MouseLeftButtonUp="SiteEPSILab_OnMouseLeftButtonUp"/>
+
+                <TextBlock Text="EPSILab, le laboratoire Microsoft de l'EPSI"
+                           Margin="10, 20, 0, 0"
+                           HorizontalAlignment="Center" />
+
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text="www.epsilab.net"
+                           Margin="40, 0, 0, 0"
+                           Foreground="#DE3043"
+                           MouseLeftButtonUp="SiteEPSILab_OnMouseLeftButtonUp" />
+
+                    <TextBlock Text="epsilab@outlook.com"
+                           Margin="40, 0, 0, 0"
+                           Foreground="#DE3043"
+                           MouseLeftButtonUp="EmailEPSILab_OnMouseLeftButtonUp"/>
+
+                </StackPanel>
+                
+            </StackPanel>
+
+            <!-- Idée proposée par -->
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        Margin="0,530,0,0">
+
+                <TextBlock Text="Idée proposée par:"
+                           FontWeight="Bold"
+                           VerticalAlignment="Top" HorizontalAlignment="Left"
+                           Margin="10,0,0,0" />
+
+                <TextBlock Text="Guillaume Duez, étudiant EPSI Arras"
+                           Margin="10, 5, 0, 0"
+                           HorizontalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

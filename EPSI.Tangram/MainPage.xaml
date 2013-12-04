@@ -1,0 +1,205 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="EPSI.Tangram.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:pshell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    pshell:SystemTray.IsVisible="True"
+    pshell:SystemTray.BackgroundColor="White"
+    pshell:SystemTray.ForegroundColor="Black">
+
+    <!-- Conteneur principal -->
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Conteneur du contenu -->
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1">
+
+            <!-- Triangle violet détaché -->
+            <Image Source="/Assets/image_20.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="99" Height="198"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="10,314,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Triangle bleu -->
+            <Image Source="/Assets/image_25.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="389" Height="194"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="81,318,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Triangle orange -->
+            <Image Source="/Assets/image_12.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="199" Height="100"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="176,218,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Losange violet -->
+            <Image Source="/Assets/image_16.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="199" Height="199"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="78,218,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Triangle vert -->
+            <Image Source="/Assets/image_08.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="196" Height="386"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="274,125,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Parallélogramme jaune -->
+            <Image Source="/Assets/image_05.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill"
+                   Width="293" Height="93"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Margin="175,126,0,0">
+                
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+            <!-- Triangle rectangle rouge -->
+            <Image Source="/Assets/image_02.png"
+                   RenderTransformOrigin="0.5, 0.5"
+                   CacheMode="BitmapCache"
+                   Stretch="Fill" Width="193"
+                   HorizontalAlignment="Left" Margin="78,125,0,0"
+                   VerticalAlignment="Top" Height="193" >
+                <Image.RenderTransform>
+                    <CompositeTransform />
+                </Image.RenderTransform>
+
+                <toolkit:GestureService.GestureListener>
+                    <toolkit:GestureListener PinchStarted="GestureListener_OnPinchStarted"
+                                             PinchDelta="GestureListener_OnPinchDelta"
+                                             PinchCompleted="GestureListener_OnPinchCompleted"
+                                             DragStarted="GestureListener_OnDragStarted"
+                                             DragDelta="GestureListener_OnDragDelta"
+                                             DragCompleted="GestureListener_OnDragCompleted" />
+                </toolkit:GestureService.GestureListener>
+
+            </Image>
+
+        </Grid>
+    </Grid>
+    
+    <!-- Barre d'applications du bas -->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <pshell:ApplicationBar IsVisible="True" Mode="Minimized">
+            <pshell:ApplicationBar.MenuItems>
+                <pshell:ApplicationBarMenuItem Text="réinitialiser le tangram"
+                                               Click="ApplicationBarResetMenuItem_OnClick" />
+                <pshell:ApplicationBarMenuItem Text="à propos"
+                                               Click="ApplicationBarSupportMenuItem_OnClick" />
+            </pshell:ApplicationBar.MenuItems>
+        </pshell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
