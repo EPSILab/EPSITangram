@@ -102,11 +102,6 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Phone.Controls.Toolkit">
-      <HintPath>..\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -162,14 +157,6 @@
     <None Include="Assets\Store\WVGA\2.png" />
     <None Include="Assets\Store\WVGA\3.png" />
     <None Include="Assets\Store\WVGA\4.png" />
-    <None Include="Assets\Store\WXGA\1x.png" />
-    <None Include="Assets\Store\WXGA\2x.png" />
-    <None Include="Assets\Store\WXGA\3x.png" />
-    <None Include="Assets\Store\WXGA\4x.png" />
-    <None Include="Assets\Store\720p\1p.png" />
-    <None Include="Assets\Store\720p\2p.png" />
-    <None Include="Assets\Store\720p\3p.png" />
-    <None Include="Assets\Store\720p\4p.png" />
     <Content Include="SplashScreenImage.jpg" />
     <Content Include="Assets\TileImage.png" />
   </ItemGroup>
@@ -184,6 +171,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.1.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
